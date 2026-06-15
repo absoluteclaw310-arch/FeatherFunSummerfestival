@@ -11,6 +11,16 @@
         h1, h2 { font-family: 'Bungee', cursive; }
         .gradient-bg { background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%); }
 
+        .hero-glow {
+            text-shadow: 0 0 10px rgba(39, 77, 245, 0.5), 0 0 20px rgba(39, 77, 245, 0.3);
+            animation: glow-pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { text-shadow: 0 0 10px rgba(39, 77, 245, 0.5), 0 0 20px rgba(39, 77, 245, 0.3); }
+            50% { text-shadow: 0 0 20px rgba(39, 77, 245, 0.8), 0 0 40px rgba(39, 77, 245, 0.5); }
+        }
+
         @keyframes flash-yellow {
             0%, 100% { background-color: #fbbf24; color: black; }
             50% { background-color: #fef3c7; color: #92400e; }
@@ -43,7 +53,7 @@
             <img src="images/fest_9.jpg" alt="Festival Background" class="w-full h-full object-cover object-center">
         </div>
         <div class="relative z-10 max-w-4xl">
-            <h1 class="text-5xl md:text-7xl drop-shadow-lg mb-4 text-center" style="color: #274DF5;">2nd ANNUAL<br>FEATHERS & FUN<br>SUMMER FESTIVAL<br>2026</h1>
+            <h1 class="text-5xl md:text-7xl drop-shadow-lg mb-4 text-center hero-glow" style="color: #274DF5;">2nd ANNUAL<br>FEATHERS & FUN<br>SUMMER FESTIVAL<br>2026</h1>
             <p class="text-2xl md:text-3xl text-white font-black drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] bg-black bg-opacity-40 px-6 py-4 rounded-2xl mb-8 inline-block backdrop-blur-sm">A Celebration of Community and Local Craftsmanship hosted by the Schenectady Homing Pigeon Club.</p>
             <a href="#vendors" class="bg-black text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-800 transition-all transform hover:scale-105 shadow-xl">Become a Vendor</a>
         </div>
